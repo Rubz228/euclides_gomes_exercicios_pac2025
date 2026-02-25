@@ -1,0 +1,1 @@
+# euclides_gomes_exercicios_pac2025
