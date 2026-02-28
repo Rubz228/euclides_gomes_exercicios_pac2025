@@ -33,6 +33,17 @@ match Nota:
         print("<50")
     case _:
         print("Opção não existe")
+
+x:any
+y:any
+
+Pedido={"Tipo" :"compra" , "Valor" : x , "Tipo" :"venda" , "Valor" : y }
+
+match Pedido:
+
+    case "Tipo"
+
+
     
 
     
