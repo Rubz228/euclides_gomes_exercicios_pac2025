@@ -18,3 +18,21 @@ match opc:
         print("Fim de semana")
     case _:
         print("Opção não existe")
+
+Nota=input("Excelente- 90 ou > , Bom- 70-89 , Sufciente- 50-69 , Insufciente- <50")
+
+match Nota:
+
+    case "Excelente":
+        print("90 ou >")
+    case "Bom":
+        print("70-89")
+    case "Sufciente":
+        print("50-69")
+    case "Insufciente":
+        print("<50")
+    case _:
+        print("Opção não existe")
+    
+
+    
