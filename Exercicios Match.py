@@ -141,3 +141,43 @@ match op:
             print("Erro: divisão por zero!")
     case _:
         print("Operação inválida!")
+
+#-----------------------------Exercicio9----------------------------
+
+metodo = input("Digite o método (GET ou POST): ")
+conteudo = input("Digite o conteúdo: ")
+
+dados = {"metodo": metodo, "conteudo": conteudo}
+
+match dados:
+    case {"metodo": "GET"}:
+        print("Requisição GET recebida")
+    case {"metodo": "POST", "conteudo": conteudo} if conteudo != "":
+        print("Requisição POST com dados válidos")
+    case {"metodo": "POST", "conteudo": conteudo} if conteudo == "":
+        print("Requisição POST sem dados")
+    case _:
+        print("Método não suportado")
+        
+#-----------------------------Exercicio10----------------------------
+
+j1 = input("Jogador 1 (pedra, papel, tesoura): ")
+j2 = input("Jogador 2 (pedra, papel, tesoura): ")
+
+match (j1, j2):
+    case ("pedra", "tesoura"):
+        print("Jogador 1 venceu")
+    case ("tesoura", "papel"):
+        print("Jogador 1 venceu")
+    case ("papel", "pedra"):
+        print("Jogador 1 venceu")
+    case ("tesoura", "pedra"):
+        print("Jogador 2 venceu")
+    case ("papel", "tesoura"):
+        print("Jogador 2 venceu")
+    case ("pedra", "papel"):
+        print("Jogador 2 venceu")
+    case (j1, j2) if j1 == j2:
+        print("Empate")
+    case _:
+        print("Jogada inválida")
