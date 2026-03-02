@@ -34,16 +34,19 @@ match Nota:
     case _:
         print("Opção não existe")
 
-x:any
-y:any
 
-Pedido={"Tipo" :"compra" , "Valor" : x , "Tipo" :"venda" , "Valor" : y }
+tipo = input("Escolhe a transação: ")
+valor = int(input("Escreve o valor: "))
 
-match Pedido:
+pedido = {"tipo": tipo, "valor": valor}
 
-    case "Tipo"
-
-
+match pedido["tipo"]:
+    case "compra":
+        print("Compra de", pedido["valor"],)
+    case "venda":
+        print("Venda de", pedido["valor"],)
+    case _:
+        print("Pedido desconhecido")
     
 
     
