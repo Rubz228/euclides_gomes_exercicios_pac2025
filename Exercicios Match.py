@@ -19,6 +19,8 @@ match opc:
     case _:
         print("Opção não existe")
 
+#-------------------------------------------------------------------------------------
+
 Nota=input("Excelente- 90 ou > , Bom- 70-89 , Sufciente- 50-69 , Insufciente- <50")
 
 match Nota:
@@ -34,6 +36,7 @@ match Nota:
     case _:
         print("Opção não existe")
 
+#--------------------------------------
 
 tipo = input("Escolhe a transação: ")
 valor = int(input("Escreve o valor: "))
@@ -47,6 +50,10 @@ match pedido["tipo"]:
         print("Venda de", pedido["valor"],)
     case _:
         print("Pedido desconhecido")
+
+#--------------------------------------
+
+
     
 
     
