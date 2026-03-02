@@ -87,5 +87,57 @@ match msg:
     case _:
         print("Mensagem genérica")
     
+#-----------------------------Exercicio6----------------------------  
 
-    
+status = input("Diz o status do servidor (ok ou erro): ")
+tempo = int(input("Diz o tempo de resposta (em ms): "))
+
+dados = {"status": status, "tempo_resposta": tempo}
+
+match dados:
+    case {"status": "ok", "tempo_resposta": tempo} if tempo > 200:
+        print("Servidor lento")
+    case {"status": "ok"}:
+        print("Servidor ativo")
+    case {"status": "erro"}:
+        print("Servidor indisponível")
+    case _:
+        print("Estado desconhecido")
+
+#-----------------------------Exercicio7---------------------------- 
+
+categoria = input("Escolhe a categoria do produto (eletronico ou alimento): ")
+preco = int(input("Digite o preço do produto: "))
+
+dados = {"categoria": categoria, "preco": preco}
+
+match dados:
+    case {"categoria": "eletronico", "preco": preco} if preco > 1000:
+        print("Produto de luxo")
+    case {"categoria": "eletronico", "preco": preco} if preco <= 1000:
+        print("Produto comum")
+    case {"categoria": "alimento"}:
+        print("Produto alimentar")
+    case _:
+        print("Categoria desconhecida")
+
+#-----------------------------Exercicio8---------------------------- 
+
+op = input("Digite a operação (soma, subtrai, multiplica, divide): ")
+num1 = float(input("Digite o primeiro número: "))
+num2 = float(input("Digite o segundo número: "))
+
+match op:
+    case "soma":
+        print(num1 + num2)
+    case "subtrai":
+        print(num1 - num2)
+    case "multiplica":
+        print(num1 * num2)
+    case "divide":
+        if num2 != 0:
+            print(num1 / num2)
+        else:
+            print("Erro: divisão por zero!")
+    case _:
+        print("Operação inválida!")
