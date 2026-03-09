@@ -78,3 +78,54 @@ def mostrar_primos():
         print(p, end=" ")
 
 mostrar_primos()
+
+#--------------Exercicio 7-----------------
+
+def contar_dez_em_dez():
+    for i in range(10, 1001,10):
+        print(i, end=" ")
+
+contar_dez_em_dez()
+#--------------Exercicio 8-----------------
+
+def quinze_dez_em_dez():
+    for i in range(15, 1001,10):
+        print(i, end=" ")
+    
+    print("\n-------------------------------\n")
+
+    for x in range(10, 1001, 10):
+        print(x ,end=" " )
+
+quinze_dez_em_dez()
+
+
+#--------------Exercicio 9-----------------
+
+def pedir_numero():
+    while True:
+        num = int(input("Digite um número entre 1 e 100: "))
+        
+        if 1 <= num <= 100:
+            print("Número válido:", num)
+            break
+        else:
+            print("Número inválido! Tente novamente.")
+
+pedir_numero()
+
+#--------------Exercicio 10-----------------
+
+def contar_divisores():
+    num = int(input("Digite um número: "))
+    total_divisores = 0
+    
+    for i in range(1, num + 1):
+        if num % i == 0:
+            total_divisores = total_divisores + 1
+            
+    print("O número", num, "tem", total_divisores, "divisores.")
+
+contar_divisores()
+
+
