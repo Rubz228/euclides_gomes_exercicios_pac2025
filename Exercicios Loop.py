@@ -128,4 +128,40 @@ def contar_divisores():
 
 contar_divisores()
 
+#--------------Exercicio 11-----------------
 
+def piramide_numeros():
+    for i in range(1, 6):
+        print(str(i) * i)
+
+piramide_numeros()
+
+#--------------Exercicio 13-----------------
+
+def mostrar_tabuada():
+    num = int(input("Digite um número para ver a sua tabuada: "))
+    
+    for i in range(1, 11):
+        resultado = num * i
+        print(num, "x", i, "=", resultado)
+   
+
+mostrar_tabuada()
+
+#--------------Exercicio 14-----------------
+
+def todas_as_tabuadas():
+    
+    for num in range(1, 101):
+        print("----------")
+        print("Tabuada do", num)
+        print("----------")
+        
+        
+        for i in range(1, 11):
+            resultado = num * i
+            print(num, "x", i, "=", resultado)
+            
+        print()
+
+todas_as_tabuadas()
